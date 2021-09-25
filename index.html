@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ORCE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylling.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+	#MyNavbar{ padding: 0.5%;	
+		overflow-x: hidden;
+		} 
+	 /*navbar font and background*/
+	.navbar-inverse .navbar-nav .active a,.navbar-inverse .navbar-nav li a {
+		color: #fff;	background: #041647d5;
+		}
+	.navbar{margin-bottom:0;  border-radius: 0;		padding: 1% 0;	 padding-right:1%;	border: 0;	top:0px;
+			position: sticky;	 background:none;	color: #b40417;	 height:100px ;	 width: 100%;	 z-index: 999;	font-size: 100%;
+		}
+	.logopic{ padding-left:20%;		height:40px;	width :120px;
+		}
+	.navbar-inverse .navbar-nav .active a,.navbar-inverse .navbar-nav .active a:focus ,.navbar-inverse .navbar-nav .active a:hover{
+		color: #710000;	background-color: #e7e7e7;	
+		overflow-x: hidden;
+		} 
+    </style>
+  </head>
+ 
+  <!-- onload="guestlogin(event);" -->
+  <body   onkeydown="keypressed(event);">
+	<!-- the random floating gear -->
+		<div class="randomize"> </div>
+	<div class="maincontainer">
+    	<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header"> 
+					<button type="button" class ="navbar-toggle" data-toggle="collapse" data-target="#MyNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img class="logopic" src="img/logoorce10.png"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="MyNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li ><a href="index.html">Home</a></li>
+						<li ><a href="About.html">About</a></li>				
+						<li ><a href="#soccer">Soccer</a></li>
+						<li ><a href="#sumo">Sumo</a></li>
+						<li ><a href="#followline">Follow line</a></li>
+						<li ><a href="BallCollector.html">ball Collector</a></li>
+						<li ><a href="https://docs.google.com/forms/d/e/1FAIpQLScnRJRqEOZcI_2aoZ5-Sm6kaa-QUVpY0-tzn-NYGVCgZn3Vcw/viewform?usp=sf_link">Registration</a></li>	
+						<li ><a onclick="loginmen();">LogIn</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!--after navigationbar  -->
+		<div class="wrapper">
+			<!-- currusel -->
+			<div class="curssuelmaincontainer">
+				<div id="maindiv">
+					<span class="sidearrow leftcursuel"  onclick="prevpic();">&#60;</span>	   
+					<div class="piccursuel"> <h1 class="curssueltext">   </h1> </div>
+					<span class="sidearrow rightcursuel" onclick="nextpic();"> &#62;</span>
+				</div>
+			</div>
+			<!-- Gears partition soccer -->
+			<div class="gears-elements-container" id="soccer">
+				<div class="Gear-container gear leftfloat" >  
+					<div class="gearpic"></div><div class="insidegearlogo" style="background-image: url('img/KIDSLOGO.png');"> </div> 
+				</div>
+				<div class="Gear-container geartext rightfloat">	
+					<p> <img src="img/little.png" class="geartxttitle">
+						Out of our believe of the capabilities of our young little innovators,this year A new category is added to ORCE competition for kids less than 8 years old, using Lego Wedo2.0 Robots.
+						<br> <br> Kids master their Design, Programming, and Problem Solving skills through fun challenges.
+					</p>
+				</div>
+			</div>
+			<!-- Gears partition sumo -->
+			<div class="gears-elements-container" id="sumo">
+				<div class="Gear-container gear rightfloat" >  
+					<div class="gearpic"> </div> 
+					<div class="insidegearlogo" style="background-image: url('img/SUMOLOGO.png');"> </div> 
+				</div>
+				<div class="Gear-container geartext leftfloat ">
+					<p>  <img src="img/sumo.png" class="geartxttitle">
+						It is a competition between 2 robots with certain specifications in which every robot attempt to push the other out of the circular arena designed especially for that.
+						<br>This year there will be two categories for Sumo competition<br>
+						Begginers : For ages 9-15 years old using lego ev3 or vex robots only<br>
+						advanced : for ages 12-18 years old using any type of robots
+					</p>
+				</div>
+			</div>
+			`<!-- Gears partition followline -->
+			<div class="gears-elements-container " id="followline">
+				<div class="Gear-container gear leftfloat" >  
+					<div class="gearpic"> </div> 
+					<div class="insidegearlogo" style="background-image: url('img/FOLLOWLOGO.png');"> </div> 
+				</div>
+				<div class="Gear-container geartext rightfloat">
+					<p>  <img src="img/follow.png" class="geartxttitle">
+						In this competition, it is required to design and program a robot that can automatically detect and follow the line in the shortest time
+						<br>This year there will be two categories for FollowLine competition<br>
+						Begginers : For ages 9-15 years old using lego ev3 or vex robots only<br>
+						advanced : for ages more than 9 old using any type of robots
+					</p>
+				</div>
+			</div>
+			<!-- Gears partition ball collector -->
+			<div class="gears-elements-container" id="ballcollector">
+				<div class="Gear-container gear rightfloat" >  
+					<div class="gearpic"> </div> 
+					<div class="insidegearlogo" style="background-image: url('img/balllogo.png');"> </div> 
+				</div>
+				<div class="Gear-container geartext leftfloat">	
+					<p> <img src="img/ballwo.png" class="geartxttitle">
+						It is a competition between two teams, where every team's robot tries to collect the maximum number of balls and put them in a specific place in the game arena designed for that in a certain time
+						<br>This year there will be two categories for ball collector competition<br>
+						Begginers : For ages 12-18 years old using any type of robots<br>
+						advanced : for ages more than 12 years old using any type of robots
+					</p>
+				</div>
+			</div>
+			<!-- second part " video "-->	
+			<div class="containersecond ">
+				<div class="row" id="row1">
+					<div class="col-xs-12 col-sm-6 pad">  
+						<p><br>Open Robotics competition Egypt is a Summer Competition that first launched in 2016 to raise 
+						the awareness of the importance of robotics, programming, teamwork, and the spirit of honest
+						competition, it is held under the patronage of the Arab Robotics Association <a href="https://roboticsar.org/">ARA</a>  and qualifies
+						Teams to participate in the Arab Robotics competition which is hosted every year by a different Arab country
+						</p>
+					</div>
+					<div class="col-xs-12 col-sm-6 pad" > 
+						<div id="Container"style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+							<iframe id="ViostreamIframe" width="100%" height="100%" src="https://www.youtube.com/embed/4_m_hUqYuRA"
+							frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+							style="position:absolute; top:0; left: 0"></iframe>
+						</div>			 
+					</div>
+				</div>
+			</div>
+
+		<!--Footer---->
+	<footer class="container-fluid text-center" >
+		<div class="row">
+			<div class="col-sm-6">
+				<h3>Contact us</h3>
+				<a class="fa fa-phone">  0120 486 8483</a>
+				
+			</div>
+        <div class="col-sm-6">
+			<h3>Contact</h3>
+			<a href="https://www.facebook.com/ORCE2017/" class="fa fa-facebook"></a>
+		
+			<a href="https://www.youtube.com/channel/UCwKqy8dAIhHt8MxYsQZXJiw?view_as=subscriber" class="fa fa-youtube"></a> <!--search for font awesome -->
+		</div>
+    
+		</div>
+	</footer>
+	<script>
+		var currentIndex=0;
+		 $(document).ready(function(){
+                $(".gear").hover(function(){ 
+					$(this).children(":first").addClass("hoverstopanim");} 
+				,function(){
+					$(this).children(":first").removeClass("hoverstopanim")})
+            });
+            function loginmen(){
+                $(".logincontainer").fadeIn(500);
+                $(".maincontainer").animate({opacity: 0.5 }, 500);
+            }
+            function guestlogin(e){
+                event.preventDefault();
+                $(".logincontainer").fadeOut(500);
+                $(".maincontainer").animate({opacity: 1 }, 500);
+				$(".curssueltext").text(pics[currentIndex].text).animate({top:"60%",opacity:"80%"}, 1500);
+            }
+
+		function moveDiv() {
+                
+                var $span = $(".randomize");
+                $span.stop();
+                var maxLeft = $(document).width() - $span.width()
+                var maxTop = $(document).height() - $span.height()
+                
+                var leftPos = Math.floor(Math.random() * (maxLeft + 1))
+                var topPos = Math.floor(Math.random() * (maxTop + 1))
+                $span.animate({left: leftPos, top: topPos},5000);
+              };  
+              moveDiv();
+            setInterval(moveDiv, 2000);
+
+			// cursuel
+			
+			var pics=[  {pic:'url("img/little1.png")', text:`The first Wedo2.0 robotics competition 
+															for kids less than 8 years`}, 
+           			    {pic:'url("img/a2.jpg")', text:
+								`Open Robotics competition Egypt is a Summer Competition `},
+              			{pic:'url("img/a5.jpg")', text:
+								`Begginers : For ages 9-15 years old using lego ev3 or vex robots only 
+								 Advanced : for ages 12-18 years old using any type of robots`},
+               			{pic:'url("img/open1.jpg")', text:` first 
+								launched in 2016 to raise the awareness of the importance of robotics `},
+               			{pic:'url("img/sfirstsection.jpg")', text:"Challenges gives motivation, Get ready to compete"}];
+						                     
+           var picPlace=$(".piccursuel");
+           
+           var direction="right";
+		   picPlace.css("background-image",pics[currentIndex].pic );
+		   
+           
+           function prevpic(){	direction="right";
+								currentIndex--;
+								getindex();   }
+
+           function nextpic(){ direction="left";
+          						currentIndex++;
+              					getindex();   }
+
+           function displaypic(){ 
+			   			$(".curssueltext").css({top:"100%",opacity:"0%"});
+              			if(direction=="right"){
+              				picPlace.animate({left:"0%",opacity:"0%"}, 400, function(){
+								  picPlace.css("background-image",pics[currentIndex].pic )});
+              				picPlace.animate({left:"90%",opacity:"0%"},0);
+               				picPlace.animate({left:"50%",opacity:"100%"}, 400,function(){
+                 				  $(".curssueltext").text(pics[currentIndex].text)
+								   .animate({top:"60%",opacity:"100%"}, 1000); });
+              			} 
+               			else if(direction=="left"){
+                			picPlace.animate({left:"90%",opacity:"0%"}, 400, function(){
+								picPlace.css("background-image",pics[currentIndex].pic )});
+               				picPlace.animate({left:"0%",opacity:"0%"},0);
+               				picPlace.animate({left:"50%",opacity:"100%"}, 400,function(){
+                   				$(".curssueltext").text(pics[currentIndex].text)
+								   .animate({top:"60%",opacity:"100%"}, 1000);});
+               			}
+           }
+		   function autoslider(){
+			if(direction=="left"){nextpic();}
+			else if(direction=="right"){prevpic();} 
+		   }
+
+
+           function getindex(){
+            if(currentIndex==pics.length){
+                currentIndex=0;
+                   }else if(currentIndex==-1){
+                    currentIndex=pics.length-1;
+                   }
+             displaypic();
+           }
+
+           function keypressed(e){        
+               if(e.keyCode === 39) { nextpic(); }
+               if(e.keyCode === 37) { prevpic(); }
+           }
+		   setInterval(autoslider, 3000);
+	</script>
+</div>
+
+</div> 
+
+<form action="/action_page.php" class="logincontainer">
+	<!-- <h1>Login</h1> -->
+
+	<label for="email"><b>Email</b></label>
+	<input type="text" placeholder="Enter Email" name="email" required>
+
+	<label for="psw"><b>Password</b></label>
+	<input type="password" placeholder="Enter Password" name="psw" required>
+
+	<button type="submit" class="btn">Login</button>
+	<button class="btn guest" onclick="guestlogin(event);" >Login as a Guest</button>
+  </form>
+</body>
+</html>

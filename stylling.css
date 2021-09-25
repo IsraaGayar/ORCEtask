@@ -1,0 +1,176 @@
+
+body {
+    background-image: url("img/kkk.png");
+    animation: mymove 10s infinite; animation-direction: alternate;
+    }
+.maincontainer{ /* to make the background blured when displaying the form */
+     opacity: 0.4;}
+
+/* Add styles to the form container */
+.logincontainer {
+    transition: all;
+    position: fixed;left: 50%;top: 50%;transform: translate(-50%,-50%);
+    width: 30%; max-height: 600px;min-width: 200px;
+    margin: 20px;padding: 3%;z-index: 100;
+    background-color: #021035fb;color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;margin: 5px 0 22px 0;
+    background: #e0e0e0;color: rgba(13, 13, 117, 0.993); border: none;
+    }
+input[type=text]:focus, input[type=password]:focus {
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    }
+.btn { /* form submit button */
+    background-color: white;color:#091e64;
+    padding: 16px 20px;border: none;margin-top: 10px;margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;  opacity: 0.9;
+    }
+.btn:hover { opacity: 1; }
+label{ font-size: large; }
+
+.wrapper {
+	overflow-x: hidden;/*  The scaling of the images would add a horizontal scrollbar, so disable x overflow.*/						  
+	overflow-y: auto;	 /* Enable scrolling on the page. */							   
+	perspective: 2px; /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/							  
+	}   	
+.randomize{ /* the floating gear effect in the screen */
+    display: block; position: absolute;top: 0;left: 0;
+    width: 200px;height: 200px;z-index: 50000; opacity: 0.5;
+    background-image: url("img/gear2.png"); background-size: contain;  background-position: center ;
+    animation: rotation 10s infinite linear ;
+}
+
+
+      /* cursuel */
+.curssuelmaincontainer > div{
+    position: relative; left: 50%;transform: translate(-50%,0%); 
+    width: 80vw; height: 80vh;overflow: hidden;
+    box-shadow: 2px 1px 10px 3px #8d8da8;
+    }
+
+.piccursuel{  /* the container of the pic and the text */
+    display:inline-block;  height: 80vh; width:80vw;z-index: 2; 
+    position: absolute;left: 50%;top: 50%; transform: translate(-50%,-50%);      
+    background-repeat: no-repeat;background-position: center;background-size: cover;
+    }
+.sidearrow{ /* the arrows of the carousel */
+    display: block; height: 50px;  width: 50px; 
+    border-radius: 50%;padding: 5px;z-index: 100;
+    position: absolute;top: 50%;transform: translate(0,-50%);
+    text-align: center;font-size: xx-large;font-weight: bolder; text-shadow: 5px 5px 5px #aaaaaa;     
+    color: rgb(175, 174, 171);
+    cursor: pointer; 
+}    /* to set the left arrow and the right arrow */
+.leftcursuel{left:10px;} 
+.rightcursuel{right:10px;}
+.curssueltext{
+    position: absolute;top:100%;left:50%;
+    opacity: 0; z-index: 200; 
+    color: white;     
+    }
+
+
+
+/* the partitions with the gears */ 
+.gears-elements-container { /* gear partition outter container */ 
+    position: relative;overflow: hidden;
+    padding: 20px; margin: 2%;
+ }
+.Gear-container { /* gear partition inner container */
+    display: inline-block;position: relative;
+    text-align: center;   font-size: 30px;
+    padding: 10px;  
+   }
+.geartext{  /* gear partition outer text container */
+    min-width: 300px;width: 50vw;
+    min-height: 250px;max-height: 470px;height: 25vw;  
+    }
+.geartext p{ /* gear partition paragraph text container */
+    height: 85%;padding-top: 1%; padding:3%; background-color: #041647d5;  
+    color: white; ; text-align: left;   font-size: 1vw; 
+    }
+.geartxttitle{ /* gear partition title container */
+    height: 100px;width: auto;
+    display: block; padding: 5px;
+    }
+    /* gear partition for floating to the right and to the left */
+.rightfloat{float: right;} 
+.leftfloat{float: left; }
+.gear { /* gear design outer container */
+    min-width: 250px;max-width: 470px;width: 35vw;
+    min-height: 250px;max-height: 470px;height: 25vw; 
+ }
+.gearpic{/* gearpicture container */
+     position: absolute;left: 50%; top: 50%;transform: translate(-50%,-50%);  
+     height: 100%; width: 100%;
+     background-image: url("img/gear.png"); background-size: contain;  background-position: center ; background-repeat: no-repeat;
+     animation: rotation 10s infinite linear ;  animation-direction: normal;
+ }
+ .hoverstopanim{/*class to stop the animation and scale the gear */
+     animation-play-state: paused;
+     animation: scale 0.25s 2;
+     animation-direction: alternate;
+ }
+ .insidegearlogo{
+    position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);z-index: 10;
+    width: 20vw;min-width: 80px;max-width: 180px;
+    height: 10vw;min-height: 80px;max-height: 180px;
+    background-size: contain;  background-position: center ; background-repeat: no-repeat;                
+ }
+
+ /* the video partition */
+.containersecond{
+    padding-top:2%;padding-bottom:2%;padding-left:5%;padding-right:5%;
+    }
+#row1{
+    padding:20px ;padding-top: 15px;	padding-bottom:1%;		
+    background: #041647d5;	
+    } 
+ /* the footer */
+footer{ 
+    width: 100%;   padding: 2%;
+    background-color: #041647d5;color: #fff; 
+    }
+#icon{
+    max-width:200px;margin: 1% auto;
+    } 
+.pad{padding:15px;}
+h2{color:#fff;}
+.fa{ padding: 15px;font-size: 25px;color: #fff;  }
+.fa:hover{    color: #041647d5; text-decoration: none;  }
+
+ /* for responsive scalling */
+@media (max-width:900px){ .fa{  font-size: 20px; padding: 10px; } }
+@media screen and (min-width: 768px) {
+    p{color:#fff; font-size:22.5px; }
+    .section{ position: relative; height: 80vh;} }	
+@media screen and (max-width: 768px) {
+    p{color:#fff; font-size:16px; }
+    .section{ position: relative; height: 50vh;}  	 } 
+
+
+/* the animations */ 
+@keyframes rotation {
+    from { transform:translate(-50%, -50%) rotate(0deg);    }
+    to {transform:translate(-50%, -50%) rotate(359deg); }
+    }
+@keyframes scale {
+    from {transform:translate(-50%, -50%) scale(1);}
+    to {transform:translate(-50%, -50%) scale(1.1);}
+    }
+@keyframes rotation {
+    from { transform:translate(-50%, -50%) rotate(0deg);    }
+    to {transform:translate(-50%, -50%) rotate(359deg); }
+    }
+@keyframes mymove {
+    0% {background-color: #0416477a;}
+    50% {background-color: #ced7ee77;;}
+    100% {background-color: #0b236478;}
+}
+
